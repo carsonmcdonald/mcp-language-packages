@@ -1,0 +1,22 @@
+[project]
+name = "mcp-language-packages"
+version = "0.1.0"
+description = "MCP server for searching packages by language."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.32.3",
+    "requests-cache>=1.2.1",
+]
+
+[project.scripts]
+mcp-language-packages = "main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "ruff>=0.11.11",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
